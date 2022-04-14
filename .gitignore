@@ -96,5 +96,5 @@ hasura/db_data/
 # Codegen types
 types/types.ts
 
-build
-cypress/screenshots
+# Turbo cache/logs
+.turbo

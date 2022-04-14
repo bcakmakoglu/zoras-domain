@@ -1,31 +1,21 @@
 {
-  "name": "temple-of-time",
+  "name": "zoras-domain-monorepo",
   "version": "0.0.1",
-  "private": false,
+  "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/bcakmakoglu/temple-of-time"
+    "url": "https://github.com/bcakmakoglu/zoras-domain"
   },
   "keywords": [
     "braks"
   ],
   "license": "MIT",
   "author": "Burak Cakmakoglu<https://github.com/bcakmakoglu>",
-  "homepage": "https://github.com/bcakmakoglu/temple-of-time#readme",
-  "exports": {
-    ".": {
-      "import": "./dist/temple-of-time.esm.js",
-      "require": "./dist/temple-of-time.cjs.js"
-    },
-    "./*": "./*"
-  },
-  "main": "./dist/temple-of-time.cjs.js",
-  "types": "./dist/temple-of-time.d.ts",
-  "module": "./dist/temple-of-time.esm.js",
-  "unpkg": "./dist/temple-of-time.iife.min.js",
-  "jsdelivr": "./dist/temple-of-time.iife.min.js",
-  "files": [
-    "dist"
+  "workspaces": [
+    "docs",
+    "e2e",
+    "example",
+    "packages/**"
   ],
   "scripts": {
     "test": "exit 0"
@@ -33,5 +23,28 @@
   "publishConfig": {
     "access": "public",
     "registry": "http://registry.npmjs.org/"
+  },
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.9.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-chai-friendly": "^0.7.2",
+    "eslint-plugin-prettier": "^3.4.1",
+    "np": "^7.5.0",
+    "prettier": "^2.4.1",
+    "shx": "^0.3.4",
+    "ts-patch": "^2.0.1",
+    "turbo": "^1.2.1",
+    "typedoc": "^0.22.13",
+    "typescript": "^4.5.5",
+    "typescript-transform-paths": "^3.3.1"
+  },
+  "np": {
+    "branch": "master",
+    "yarn": true,
+    "message": "v%s"
   }
 }

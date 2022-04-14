@@ -1,0 +1,40 @@
+{
+  "name": "package-a",
+  "version": "0.0.0",
+  "private": false,
+  "homepage": "https://github.com/user/my-lib#readme",
+  "workspaces": [
+    "example",
+    "e2e",
+    "packages/**",
+    "docs"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/my-lib.esm.js",
+      "require": "./dist/my-lib.cjs.js"
+    },
+    "./dist/*": "./dist/*"
+  },
+  "main": "./dist/my-lib.cjs.js",
+  "types": "./dist/my-lib.d.ts",
+  "module": "./dist/my-lib.esm.js",
+  "unpkg": "./dist/my-lib.iife.min.js",
+  "jsdelivr": "./dist/my-lib.iife.min.js",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "dev": "exit 0",
+    "test": "exit 0",
+    "lint": "eslint --ext \".js,.jsx,.ts,.tsx\" --fix --ignore-path .gitignore ."
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {},
+  "publishConfig": {
+    "access": "public",
+    "registry": "http://registry.npmjs.org/"
+  }
+}
